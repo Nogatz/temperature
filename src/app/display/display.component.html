@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="container-body-m">
+    <app-display-body
+      [temperature]="this.display.controls.temperature.value"
+      [minTemperature]="this.display.controls.minTemperature.value"
+      [maxTemperature]="this.display.controls.maxTemperature.value"
+    >
+    </app-display-body>
+  </div>
+  <div class="text">
+    <p>Type a temperature between -10°C and 70°C</p>
+  </div>
+
+  <form [formGroup]="display" class="form">
+    <input type="number" placeholder="Temperature" formControlName="temperature" />
+    <input
+      type="number"
+      placeholder="Min Temperature"
+      formControlName="minTemperature"
+    />
+    <input
+      type="number"
+      placeholder="Max Temperature"
+      formControlName="maxTemperature"
+    />
+  </form>
+</div>

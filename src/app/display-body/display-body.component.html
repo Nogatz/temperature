@@ -1,0 +1,162 @@
+<div class="title">
+    <h2>Thermometer</h2>
+</div>
+<div class="svg">
+  <svg viewBox="-150 -150 300 300" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#000" stroke-width="2" />
+
+    <circle cx="0" cy="0" r="135" fill="none" stroke="#888" stroke-width="1" />
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#ccc" stroke-width="1" />
+
+    <!-- the calculations...
+    4.5
+    -10 = 180
+    -9 = 175.5
+    -8 = 171
+    -7 = 166.5
+    -6 = 162
+    -5 = 157.5
+    -4 = 153
+    -3 = 148.5
+    -2 = 144
+    -1 = 139.5
+    0 = 135
+    10 = 90
+    25
+   -->
+    <text
+      x="0"
+      y="125"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      -10°C
+    </text>
+    <text
+      x="70"
+      y="70"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      0°C
+    </text>
+    <text
+      x="125"
+      y="0"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      10°C
+    </text>
+    <text
+      x="70"
+      y="-70"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      20°C
+    </text>
+    <text
+      x="0"
+      y="-125"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      30°C
+    </text>
+    <text
+      x="-70"
+      y="-70"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      40°C
+    </text>
+    <text
+      x="-125"
+      y="0"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      50°C
+    </text>
+    <text
+      x="-70"
+      y="70"
+      font-family="Arial"
+      font-size="12"
+      fill="#000"
+      text-anchor="middle"
+    >
+      60°C
+    </text>
+
+    <line
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="-130"
+      stroke="#008000"
+      stroke-width="2"
+      [attr.transform]="'rotate(' + temperatureRotate + ')'"
+    />
+
+    <line
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="-130"
+      stroke="#0000FF"
+      stroke-width="2"
+      [attr.transform]="'rotate(' + minTemperatureRotate + ')'"
+    />
+
+    <line
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="-130"
+      stroke="#ff0000"
+      stroke-width="2"
+      [attr.transform]="'rotate(' + maxTemperatureRotate + ')'"
+    />
+
+    <circle cx="0" cy="0" r="5" fill="#000" />
+  </svg>
+</div>
+
+<div class="temperatureSet">
+  <h1>{{temperature}} °C</h1>
+</div>
+
+<div>
+  <p>legend:</p>
+  <div class="legend">
+    <div class="legendItem">
+      <div class="temperature"></div>
+      Temperature
+    </div>
+    <div class="legendItem">
+      <div class="minTemperature"></div>
+      Min Temperature
+    </div>
+    <div class="legendItem">
+      <div class="maxTemperature"></div>
+      Max Temperature
+    </div>
+  </div>
+</div>
