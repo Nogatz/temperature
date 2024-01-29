@@ -1,31 +1,21 @@
-# temperature
+# Temperature Display Component
 
-Displays target temperature
+The Temperature Display component is designed to showcase target temperature information within an Angular application.
 
-# the concept
+# Concept
 
-# the calculation
+The component operates on a rotational scale where temperature values are mapped to degrees. The scale ranges from -10°C to 70°C, with each degree equivalent to 4.5° of rotation. For instance:
 
-I started in 180°=-10°C and ended in 180°=70°C
-The step is 4.5°
-exemple:
--10 = 180
--9 = 175.5
--8 = 171
--7 = 166.5
--6 = 162
--5 = 157.5
--4 = 153
--3 = 148.5
--2 = 144
--1 = 139.5
-0 = 135
-10 = 90
+-10°C corresponds to 180°
+0°C corresponds to 135°
+10°C corresponds to 90°
+Calculation
+The conversion from temperature to degrees follows a linear progression, with each degree increment corresponding to 4.5°C. The formula for conversion is straightforward, ensuring a clear mapping between temperature values and their visual representation.
 
-# the component
+# Component Structure
 
-The component display-body is self sustein, is possible to add this component in all parts of this project and if is need is possible to copy the component and past in another project and it will work. The componente have the size of the parent component
+The display-body component is designed to be modular and self-contained, allowing for easy integration into various parts of the project. It adapts to the size of its parent component, ensuring seamless integration and scalability.
 
-# How to run
+# How to Run
 
-With all angular dependencies installed, just run ng start
+To run the application, ensure all Angular dependencies are installed. Then, execute ng start to initiate the application. The Angular CLI handles the build and deployment process, making it straightforward to launch the project locally.
